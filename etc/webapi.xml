@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+	<route url="/V1/oneagrix-customblog/blog" method="POST">
+		<service class="OneAgrix\CustomBlog\Api\BlogRepositoryInterface" method="save"/>
+		<resources>
+			<resource ref="OneAgrix_CustomBlog::Blog_save"/>
+		</resources>
+	</route>
+	<route url="/V1/oneagrix-customblog/blog/search" method="GET">
+		<service class="OneAgrix\CustomBlog\Api\BlogRepositoryInterface" method="getList"/>
+		<resources>
+			<resource ref="OneAgrix_CustomBlog::Blog_view"/>
+		</resources>
+	</route>
+	<route url="/V1/oneagrix-customblog/blog/:blogId" method="GET">
+		<service class="OneAgrix\CustomBlog\Api\BlogRepositoryInterface" method="get"/>
+		<resources>
+			<resource ref="OneAgrix_CustomBlog::Blog_view"/>
+		</resources>
+	</route>
+	<route url="/V1/oneagrix-customblog/blog/:blogId" method="PUT">
+		<service class="OneAgrix\CustomBlog\Api\BlogRepositoryInterface" method="save"/>
+		<resources>
+			<resource ref="OneAgrix_CustomBlog::Blog_update"/>
+		</resources>
+	</route>
+	<route url="/V1/oneagrix-customblog/blog/:blogId" method="DELETE">
+		<service class="OneAgrix\CustomBlog\Api\BlogRepositoryInterface" method="deleteById"/>
+		<resources>
+			<resource ref="OneAgrix_CustomBlog::Blog_delete"/>
+		</resources>
+	</route>
+</routes>
