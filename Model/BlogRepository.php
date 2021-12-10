@@ -22,19 +22,9 @@ class BlogRepository implements BlogRepositoryInterface
 {
 
     /**
-     * @var ResourceBlog
-     */
-    protected $resource;
-
-    /**
      * @var BlogInterfaceFactory
      */
     protected $blogFactory;
-
-    /**
-     * @var BlogCollectionFactory
-     */
-    protected $blogCollectionFactory;
 
     /**
      * @var Blog
@@ -45,6 +35,16 @@ class BlogRepository implements BlogRepositoryInterface
      * @var CollectionProcessorInterface
      */
     protected $collectionProcessor;
+
+    /**
+     * @var ResourceBlog
+     */
+    protected $resource;
+
+    /**
+     * @var BlogCollectionFactory
+     */
+    protected $blogCollectionFactory;
 
 
     /**

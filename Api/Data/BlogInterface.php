@@ -12,6 +12,7 @@ interface BlogInterface
 
     const TITLE = 'title';
     const BLOG_ID = 'blog_id';
+    const DESCRIPTION = 'description';
 
     /**
      * Get blog_id
@@ -38,5 +39,18 @@ interface BlogInterface
      * @return \OneAgrix\CustomBlog\Blog\Api\Data\BlogInterface
      */
     public function setTitle($title);
+
+    /**
+     * Get description
+     * @return string|null
+     */
+    public function getDescription();
+
+    /**
+     * Set description
+     * @param string $description
+     * @return \OneAgrix\CustomBlog\Blog\Api\Data\BlogInterface
+     */
+    public function setDescription($description);
 }
 

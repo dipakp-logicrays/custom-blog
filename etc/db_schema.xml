@@ -6,5 +6,6 @@
 			<column name="blog_id"/>
 		</constraint>
 		<column name="title" nullable="true" xsi:type="text" comment="Blog title"/>
+		<column name="description" nullable="true" xsi:type="text" comment="description"/>
 	</table>
 </schema>

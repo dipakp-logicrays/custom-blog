@@ -10,10 +10,10 @@ namespace OneAgrix\CustomBlog\Ui\Component\Listing\Column;
 class BlogActions extends \Magento\Ui\Component\Listing\Columns\Column
 {
 
-    const URL_PATH_EDIT = 'oneagrix_customblog/blog/edit';
-    const URL_PATH_DELETE = 'oneagrix_customblog/blog/delete';
     const URL_PATH_DETAILS = 'oneagrix_customblog/blog/details';
     protected $urlBuilder;
+    const URL_PATH_EDIT = 'oneagrix_customblog/blog/edit';
+    const URL_PATH_DELETE = 'oneagrix_customblog/blog/delete';
 
     /**
      * @param \Magento\Framework\View\Element\UiComponent\ContextInterface $context

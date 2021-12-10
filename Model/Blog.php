@@ -52,5 +52,21 @@ class Blog extends AbstractModel implements BlogInterface
     {
         return $this->setData(self::TITLE, $title);
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function getDescription()
+    {
+        return $this->_get(self::DESCRIPTION);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function setDescription($description)
+    {
+        return $this->setData(self::DESCRIPTION, $description);
+    }
 }
 

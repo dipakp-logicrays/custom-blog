@@ -10,8 +10,8 @@ namespace OneAgrix\CustomBlog\Controller\Adminhtml;
 abstract class Blog extends \Magento\Backend\App\Action
 {
 
-    const ADMIN_RESOURCE = 'OneAgrix_CustomBlog::top_level';
     protected $_coreRegistry;
+    const ADMIN_RESOURCE = 'OneAgrix_CustomBlog::top_level';
 
     /**
      * @param \Magento\Backend\App\Action\Context $context
