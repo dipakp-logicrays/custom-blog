@@ -107,7 +107,9 @@ class Mysql extends \Zend_Db_Statement_Pdo
             return $callback();
         } catch (\PDOException $e) {
             $message = sprintf('%s, query was: %s', $e->getMessage(), $this->_stmt->queryString);
-            throw new \Zend_Db_Statement_Exception($message, (int)$e->getCode(), $e);
+            if ($this->isMediaStorageInFileSystem() && $e->getMessage() !== "SQLSTATE[42S02]: Base table or view not found: 1146 Table 'magento.media_storage_file_storage' doesn't exist") {
+                throw new \Zend_Db_Statement_Exception($message, (int)$e->getCode(), $e);
+            }
         } finally {
             error_reporting($previousLevel);
         }
